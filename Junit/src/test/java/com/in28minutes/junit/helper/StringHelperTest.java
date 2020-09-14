@@ -8,7 +8,11 @@ public class StringHelperTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		StringHelper stringHelper= new StringHelper();
+		
+		assertEquals("CD", stringHelper.truncateAInFirst2Positions("AACD"));
+		assertEquals("CD", stringHelper.truncateAInFirst2Positions("ACD"));
+		assertEquals("CD", stringHelper.truncateAInFirst2Positions("AACD"));
 	}
 
 }
