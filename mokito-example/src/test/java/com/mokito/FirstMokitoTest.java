@@ -9,6 +9,7 @@ public class FirstMokitoTest {
 	@Test
 	public void test() {
 		assertTrue(true);
+		
 	}
 
 }
