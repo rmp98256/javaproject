@@ -18,7 +18,7 @@ assertArrayEquals(exp,num);
 
 	}
 	
-	
+	//i am expecting un exeption 
 	@Test(expected = NullPointerException.class)
 	public void nullpoiterTest()
 	{
@@ -26,4 +26,6 @@ assertArrayEquals(exp,num);
 		Arrays.sort(num);
 		
 	}
+	
+	
 }
