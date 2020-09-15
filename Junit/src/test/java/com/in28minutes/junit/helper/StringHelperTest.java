@@ -2,10 +2,16 @@ package com.in28minutes.junit.helper;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class StringHelperTest {
-	StringHelper stringHelper= new StringHelper();
+	StringHelper stringHelper;
+	@Before
+	public void before()
+	{
+		stringHelper= new StringHelper();
+	}
 
 	@Test
 	public void testTruncateAInFirst2Positions_Ainfirst2Position() {
@@ -25,25 +31,25 @@ public class StringHelperTest {
 	@Test
 	public void TestAreFirstAndLastTwoCharactersTheSame_1()
 	{
-		assertEquals(false, stringHelper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+		assertFalse(stringHelper.areFirstAndLastTwoCharactersTheSame("ABCD"));
 	}
 	
 	@Test
 	public void TestAreFirstAndLastTwoCharactersTheSame_2()
 	{
-		assertEquals(false, stringHelper.areFirstAndLastTwoCharactersTheSame("A"));
+		assertFalse(stringHelper.areFirstAndLastTwoCharactersTheSame("A"));
 	}
 	
 	@Test
 	public void TestAreFirstAndLastTwoCharactersTheSame_3()
 	{
-		assertEquals(true, stringHelper.areFirstAndLastTwoCharactersTheSame("ABAB"));
+		assertTrue( stringHelper.areFirstAndLastTwoCharactersTheSame("ABAB"));
 	}
 	
 	@Test
 	public void TestAreFirstAndLastTwoCharactersTheSame_4()
 	{
-		assertEquals(true, stringHelper.areFirstAndLastTwoCharactersTheSame("AB"));
+		assertTrue(stringHelper.areFirstAndLastTwoCharactersTheSame("AB"));
 	}
 
 
